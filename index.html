@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReciTech | Recicla Inteligente</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("qkc7j2T8UauF_bzNR"); // Reemplaza esto con tu clave pública de EmailJS
+  })();
+</script>
+</head>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <img src="assets/logo_horizo.png" alt="ReciTech Logo" class="logo">
+      <nav>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#funciona">¿Cómo funciona?</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>Únete al reciclaje inteligente</h1>
+      <p>ReciTech conecta personas, empresas y puntos verdes para un mundo más limpio.</p>
+      <a href="G:\Mi unidad\app-debug.apk" class="btn" target="_blank" rel="noopener noreferrer">Descargar APK</a>
+      <p style="margin-top: 16px;">Próximamente en Google Playstore</p>
+    </div>
+  </section>
+
+  <!-- Wave Separator -->
+  <div class="wave-separator">
+    <svg viewBox="0 0 1440 320">
+      <path fill="#A5D6A7" fill-opacity="1"
+        d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,144C1248,149,1344,203,1392,229.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
+    </svg>
+  </div>
+
+  <!-- ¿Qué es? -->
+  <section id="que-es" class="info-section" data-aos="fade-up">
+    <h2>¿Qué es ReciTech?</h2>
+    <p>ReciTech es una app mexicana que facilita el reciclaje: conecta usuarios con centros de acopio o permite agendar recolección a domicilio. Además, promueve la educación ambiental y ofrece recompensas por tus acciones sostenibles.</p>
+  </section>
+
+<!-- Separador entre secciones -->
+<div class="wave-separator">
+    <svg viewBox="0 0 1440 320">
+      <path fill="#A5D6A7" fill-opacity="1"
+        d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,144C1248,149,1344,203,1392,229.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
+    </svg>
+  </div>
+
+  <!-- ¿Cómo funciona? -->
+  <section id="funciona" class="funciona-section" data-aos="fade-up">
+    <h2>¿Cómo funciona?</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/icon_registro.png" alt="Registro">
+        <h3>1. Regístrate</h3>
+        <p>Crea tu cuenta y completa tu perfil ciudadano o empresarial.</p>
+      </div>
+      
+      <div class="card">
+        <img src="assets/icon_mapa.png" alt="Mapa">
+        <h3>2. Elige tu forma de reciclar</h3>
+        <p>Encuentra puntos cercanos o solicita recolección a domicilio.</p>
+      </div>
+      <div class="card">
+        <img src="assets/icon_recompensas.png" alt="Recompensas">
+        <h3>3. Suma puntos</h3>
+        <p>Gana recompensas que puedes canjear con empresas aliadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separador entre secciones -->
+<div class="wave-separator">
+    <svg viewBox="0 0 1440 320">
+      <path fill="#A5D6A7" fill-opacity="1"
+        d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,144C1248,149,1344,203,1392,229.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
+    </svg>
+  </div>
+
+  <!-- Servicios -->
+  <section id="servicios" class="info-section alt" data-aos="fade-up">
+    <h2>Servicios de ReciTech</h2>
+    <ul class="servicios-lista">
+      <li>Geolocalización de puntos de reciclaje</li>
+      <li>Recolección a domicilio</li>
+      <li>Censo de reciclaje y hábitos</li>
+      <li>Blog educativo y consejos</li>
+      <li>Recompensas por acciones sostenibles</li>
+    </ul>
+  </section>
+
+  <!-- Separador entre secciones -->
+<div class="wave-separator">
+    <svg viewBox="0 0 1440 320">
+      <path fill="#A5D6A7" fill-opacity="1"
+        d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,144C1248,149,1344,203,1392,229.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
+    </svg>
+  </div>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto-section" data-aos="fade-up">
+    <h2>¡Contáctanos!</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="Escribe tu mensaje" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <img src="assets/logo_horizo2.png" class="footer-logo" alt="ReciTech logo" />
+      <p>&copy; 2025 ReciTech · Todos los derechos reservados</p>
+      <div class="redes">
+        <a href="https://www.instagram.com/recitech3?igsh=cWlwOXc4bWpnNXlv" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
