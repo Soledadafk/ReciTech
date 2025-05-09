@@ -2,55 +2,31 @@
 
 // Scroll suave a secciones
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-  
-  // Validación de formulario (ejemplo básico)
-  const form = document.querySelector('#contact-form'); // Asegúrate de que tu formulario tenga ese id
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      const nombre = document.querySelector('#nombre');
-      const email = document.querySelector('#email');
-      const mensaje = document.querySelector('#mensaje');
-  
-      if (!nombre.value || !email.value || !mensaje.value) {
-        e.preventDefault();
-        alert('Por favor, completa todos los campos.');
-      }
-    });
-  }
-  
-  // Botón "Volver arriba"
-  const backToTop = document.querySelector('#back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTop.classList.add('visible');
-    } else {
-      backToTop.classList.remove('visible');
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
-  if (backToTop) {
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-  
+});
+
+// Validación de formulario de contacto
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const nombre = form.querySelector('input[placeholder="Nombre"]');
+  const email = form.querySelector('input[placeholder="Correo electrónico"]');
+  const mensaje = form.querySelector('textarea[placeholder="Escribe tu mensaje"]');
+
+  if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-  
+    
+      if (!nombre.value.trim() || !email.value.trim() || !mensaje.value.trim()) {
+        alert('Por favor, completa todos los campos.');
+        return;
+      }
+    
       emailjs.sendForm('service_1tjj6dr', 'template_31cq83t', this)
         .then(() => {
           alert('¡Mensaje enviado con éxito! 🌱');
@@ -59,4 +35,32 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
           alert('Error al enviar el mensaje: ' + error.text);
         });
     });
-  });
+  }
+
+  // Botón volver arriba (si existe)
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Panel lateral info
+  const toggleBtn = document.getElementById('infoToggle');
+  const panel = document.getElementById('sidePanel');
+  const closeBtn = document.getElementById('closePanel');
+
+  if (toggleBtn && panel && closeBtn) {
+    toggleBtn.addEventListener('click', () => {
+      panel.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      panel.classList.remove('active');
+    });
+  }
+});
